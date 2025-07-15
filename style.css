@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
-/* === VARIABLES === */
+
 :root {
   --red: hsl(0, 78%, 62%);
   --cyan: hsl(180, 62%, 55%);
@@ -11,7 +11,7 @@
   --very-light-gray: hsl(0, 0%, 98%);
 }
 
-/* === RESET === */
+
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +24,7 @@ body {
   color: var(--very-dark-blue);
   font-size: 15px;
   min-height: 100vh;
-  /* Center the main container */
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +45,7 @@ header {
 
 .heading {
   font-weight: 200;
-  font-size: 1.5rem; /* Mobile font size */
+  font-size: 1.5rem;
 }
 
 .title {
@@ -58,7 +58,6 @@ header {
   margin-top: 1rem;
 }
 
-/* === CARD LAYOUT (MOBILE FIRST) === */
 .card-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -75,11 +74,11 @@ header {
   min-height: 225px;
 }
 
-/* Card border colors based on their order in the HTML */
-.card:nth-child(1) { border-top: 4px solid var(--cyan); }      /* Supervisor */
-.card:nth-child(2) { border-top: 4px solid var(--red); }       /* Team Builder */
-.card:nth-child(3) { border-top: 4px solid var(--orange); }   /* Karma */
-.card:nth-child(4) { border-top: 4px solid var(--blue); }      /* Calculator */
+
+.card:nth-child(1) { border-top: 4px solid var(--cyan); }      
+.card:nth-child(2) { border-top: 4px solid var(--red); }       
+.card:nth-child(3) { border-top: 4px solid var(--orange); }   
+.card:nth-child(4) { border-top: 4px solid var(--blue); }    
 
 
 .card h2 {
@@ -110,10 +109,9 @@ header {
 
   .card-container {
     display: grid;
-    /* Create 3 equal columns */
+  
     grid-template-columns: repeat(3, 1fr);
     gap: 1.8rem;
-    /* Vertically center the items in the grid tracks */
     align-items: center;
   }
 
@@ -121,27 +119,26 @@ header {
     min-height: 250px;
   }
 
-  /* --- Card Placement --- */
   
-  /* Supervisor: First column, spanning both rows */
+  
   .card:nth-child(1) {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
   }
 
-  /* Team Builder: Second column, first row */
+
   .card:nth-child(2) {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
   }
 
-  /* Karma: Second column, second row */
+
   .card:nth-child(3) {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
   }
 
-  /* Calculator: Third column, spanning both rows */
+  
   .card:nth-child(4) {
     grid-column: 3 / 4;
     grid-row: 1 / 3;
